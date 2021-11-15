@@ -1,6 +1,27 @@
 # zip2tz
 
-Simple library for converting a zipcode to a timezone. Utilizes data from the [Ziptz project](https://github.com/infused/ziptz).
+Simple library for converting a zipcode to a timezone string.
+
+## Installation
+
+### Yarn
+```console
+yarn add zip2tz
+```
+
+### NPM
+```console
+npm install --save zip2tz
+```
+
+## Usage
+
+```javascript
+const { lookup } = require('zip2tz');
+
+const tz = lookup('94110');
+console.log(tz); // America/Los_Angeles
+```
 
 ## Supported Time Zones
 
@@ -45,3 +66,7 @@ Simple library for converting a zipcode to a timezone. Utilizes data from the [Z
 * Pacific/Pohnpei
 * Pacific/Saipan
 * Pacific/Wake
+
+## Credit
+
+This project uses data from the [Ziptz project](https://github.com/infused/ziptz).
