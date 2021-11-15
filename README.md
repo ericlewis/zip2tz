@@ -3,6 +3,7 @@
 Simple library for converting a zipcode to a timezone string.
 
 ## Installation
+node 14+ supported.
 
 ### Yarn
 ```console
