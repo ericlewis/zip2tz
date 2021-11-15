@@ -27,7 +27,8 @@ inflatedBuffer.toString('utf8').split("\n").slice(0, -1).forEach(line => {
 });
 
 // codegen for int -> tz string
-fs.writeFileSync(tzMapPath, `exports.tzInts = ${JSON.stringify(Object.assign({}, ...Array.from(tzSet, (value, k) => ({ [parseInt(k)]: value }))))};`, { flag: "w+" })
+const map = Object.assign({}, ...Array.from(tzSet, (value, k) => ({ [parseInt(k)]: value })));
+fs.writeFileSync(tzMapPath, `exports.tzInts = ${JSON.stringify(map)};`, { flag: "w+" })
 
 // codegen for zip -> int
 fs.writeFileSync(tzJSONPath, JSON.stringify(tz), { flag: "w+" });
