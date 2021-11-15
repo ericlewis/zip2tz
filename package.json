@@ -1,6 +1,6 @@
 {
   "name": "zip2tz",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A zipcode to timezone library",
   "main": "src/index.js",
   "types": "index.d.ts",
